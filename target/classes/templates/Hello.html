@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<h1 th:text="${message}">Hello World</h1>
+<div th:inline="text">
+    <p>Hello,[[${userName}]]</p>
+</div>
+<p th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}">neo</p>
+<p th:text="${#dates.createToday()}">neo</p>
+<p th:text="${#dates.createNow()}">neo</p>
+
+    <div th:insert="layout/copyright :: copyright"></div>
+    <div th:replace="layout/copyright :: copyright"></div>
+</body>
+</html>
