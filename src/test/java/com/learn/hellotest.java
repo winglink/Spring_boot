@@ -15,32 +15,32 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class hellotest {
-    private MockMvc mockMvc;
-    @Autowired
-    private UserDao userDao;
-    @Test
-    public void hello(){
-        System.out.println("hello world");
-    }
-
-    @Before
-    public  void setUp() throws Exception{
-        mockMvc = MockMvcBuilders.standaloneSetup(new HelloWorldController()).build();
-    }
-
-    @Test
-    public  void getHello() throws Exception{
-        mockMvc.perform(MockMvcRequestBuilders.post("/?name=wing中")
-               .accept(MediaType.APPLICATION_JSON_UTF8)).andDo(print());
-    }
-
-    @Test
-    public  void findUserByUserName_Test(){
-            User user=userDao.findUserByUserName("admin");
-            System.out.println(user);
-    }
-}
+//
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
+//public class hellotest {
+//    private MockMvc mockMvc;
+//    @Autowired
+//    private UserDao userDao;
+//    @Test
+//    public void hello(){
+//        System.out.println("hello world");
+//    }
+//
+//    @Before
+//    public  void setUp() throws Exception{
+//        mockMvc = MockMvcBuilders.standaloneSetup(new HelloWorldController()).build();
+//    }
+//
+//    @Test
+//    public  void getHello() throws Exception{
+//        mockMvc.perform(MockMvcRequestBuilders.post("/?name=wing中")
+//               .accept(MediaType.APPLICATION_JSON_UTF8)).andDo(print());
+//    }
+//
+//    @Test
+//    public  void findUserByUserName_Test(){
+//            User user=userDao.findUserByUserName("admin");
+//            System.out.println(user);
+//    }
+//}

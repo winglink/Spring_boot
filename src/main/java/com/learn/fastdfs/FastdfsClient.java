@@ -3,19 +3,23 @@ package com.learn.fastdfs;
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+
 
 public class FastdfsClient {
     private static org.slf4j.Logger logger = LoggerFactory.getLogger(FastdfsClient.class);
 
     static  {
         try{
+            System.out.println("pppppppppppppppppp");
+//            String filepath=new ClassPathResource("fdfs_client.conf").getFile().getAbsolutePath();
+//            System.out.println(filepath);
             ClientGlobal.initByProperties("fastdfs-client.properties");
+            System.out.println("ClientGlobal.configInfo(): " + ClientGlobal.configInfo());
         }catch (Exception e){
-
+             logger.error("fastdfs init failed ");
         }
     }
     public static String[] upload(FastDFSFile file) {
