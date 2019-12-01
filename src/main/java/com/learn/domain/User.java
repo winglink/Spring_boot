@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class User implements Serializable{
-	private int userId;
+	private long userId;
 
 	private String userName;
 
@@ -32,11 +32,11 @@ public class User implements Serializable{
 		this.lastVisit = lastVisit;
 	}
 
-	public int getUserId() {
+	public long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(long userId) {
 		this.userId = userId;
 	}
 

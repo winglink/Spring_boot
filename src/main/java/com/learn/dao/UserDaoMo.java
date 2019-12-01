@@ -36,6 +36,8 @@ public class UserDaoMo {
             return  0;
     }
     public  void removeUser(User user){
-           Query query=new Query(Criteria.where())
+           Query query=new Query(Criteria.where("userId").is(user.getUserId()));
+           mongoTemplate.remove(query,User.class);
+
     }
 }

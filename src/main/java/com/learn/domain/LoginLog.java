@@ -3,9 +3,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class LoginLog implements Serializable{
-	private int loginLogId;
+	private long loginLogId;
 
-	private int userId;
+	private long userId;
 
 	private String ip;
 
@@ -27,19 +27,19 @@ public class LoginLog implements Serializable{
 		this.loginDate = loginDate;
 	}
 
-	public int getLoginLogId() {
+	public long getLoginLogId() {
 		return loginLogId;
 	}
 
-	public void setLoginLogId(int loginLogId) {
+	public void setLoginLogId(long loginLogId) {
 		this.loginLogId = loginLogId;
 	}
 
-	public int getUserId() {
+	public long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(long userId) {
 		this.userId = userId;
 	}
 
